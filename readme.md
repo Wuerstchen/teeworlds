@@ -1,5 +1,11 @@
-Teeworlds [![CircleCI](https://circleci.com/gh/teeworlds/teeworlds.svg?style=svg)](https://circleci.com/gh/teeworlds/teeworlds)
+Teeworlds Instagib [![CircleCI](https://circleci.com/gh/teeworlds/teeworlds.svg?style=svg)](https://circleci.com/gh/teeworlds/teeworlds)
 =========
+
+Insta-kills with lasers!
+------------------------------
+
+- Players start with 1 health and laser rifle
+- No pickups
 
 A retro multiplayer shooter
 ---------------------------
@@ -18,11 +24,3 @@ Please visit https://www.teeworlds.com/ for up-to-date information about
 the game, including new versions, custom maps and much more.
 
 Originally written by Magnus Auvinen.
-
-Instagib modification features
-------------------------------
-
-Insta-kills with lasers!
-
-- Players start with 1 health and laser rifle
-- No pickups
