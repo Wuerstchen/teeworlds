@@ -238,14 +238,14 @@ void IGameController::OnCharacterSpawn(CCharacter *pChr)
 	if(m_GameFlags&GAMEFLAG_SURVIVAL)
 	{
 		// give start equipment
-		pChr->IncreaseHealth(10);
-		pChr->IncreaseArmor(5);
+		pChr->IncreaseHealth(1);
+		pChr->IncreaseArmor(0);
 
-		pChr->GiveWeapon(WEAPON_HAMMER, -1);
+		/*pChr->GiveWeapon(WEAPON_HAMMER, -1);
 		pChr->GiveWeapon(WEAPON_GUN, 10);
 		pChr->GiveWeapon(WEAPON_SHOTGUN, 10);
-		pChr->GiveWeapon(WEAPON_GRENADE, 10);
-		pChr->GiveWeapon(WEAPON_LASER, 5);
+		pChr->GiveWeapon(WEAPON_GRENADE, 10);*/
+		pChr->GiveWeapon(WEAPON_LASER, -1);
 
 		// prevent respawn
 		pChr->GetPlayer()->m_RespawnDisabled = GetStartRespawnState();
@@ -253,11 +253,12 @@ void IGameController::OnCharacterSpawn(CCharacter *pChr)
 	else
 	{
 		// default health
-		pChr->IncreaseHealth(10);
+		pChr->IncreaseHealth(1);
 
 		// give default weapons
-		pChr->GiveWeapon(WEAPON_HAMMER, -1);
-		pChr->GiveWeapon(WEAPON_GUN, 10);
+		/*pChr->GiveWeapon(WEAPON_HAMMER, -1);
+		pChr->GiveWeapon(WEAPON_GUN, 10);*/
+		pChr->GiveWeapon(WEAPON_LASER, -1);
 	}
 }
 
@@ -287,7 +288,7 @@ bool IGameController::OnEntity(int Index, vec2 Pos)
 	case ENTITY_SPAWN_BLUE:
 		m_aaSpawnPoints[2][m_aNumSpawnPoints[2]++] = Pos;
 		break;
-	case ENTITY_ARMOR_1:
+	/*case ENTITY_ARMOR_1:
 		Type = PICKUP_ARMOR;
 		break;
 	case ENTITY_HEALTH_1:
@@ -304,7 +305,7 @@ bool IGameController::OnEntity(int Index, vec2 Pos)
 		break;
 	case ENTITY_POWERUP_NINJA:
 		if(g_Config.m_SvPowerups)
-			Type = PICKUP_NINJA;
+			Type = PICKUP_NINJA;*/
 	}
 
 	if(Type != -1)

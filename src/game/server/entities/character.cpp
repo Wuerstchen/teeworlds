@@ -59,8 +59,8 @@ bool CCharacter::Spawn(CPlayer *pPlayer, vec2 Pos)
 	m_EmoteStop = -1;
 	m_LastAction = -1;
 	m_LastNoAmmoSound = -1;
-	m_ActiveWeapon = WEAPON_GUN;
-	m_LastWeapon = WEAPON_HAMMER;
+	m_ActiveWeapon = WEAPON_LASER;
+	m_LastWeapon = WEAPON_LASER;
 	m_QueuedWeapon = -1;
 
 	m_pPlayer = pPlayer;
@@ -331,7 +331,7 @@ void CCharacter::FireWeapon()
 
 		} break;
 
-		case WEAPON_GUN:
+		/*case WEAPON_GUN:
 		{
 			new CProjectile(GameWorld(), WEAPON_GUN,
 				m_pPlayer->GetCID(),
@@ -341,9 +341,9 @@ void CCharacter::FireWeapon()
 				g_pData->m_Weapons.m_Gun.m_pBase->m_Damage, false, 0, -1, WEAPON_GUN);
 
 			GameServer()->CreateSound(m_Pos, SOUND_GUN_FIRE);
-		} break;
+		} break;*/
 
-		case WEAPON_SHOTGUN:
+		/*case WEAPON_SHOTGUN:
 		{
 			int ShotSpread = 2;
 
@@ -363,9 +363,9 @@ void CCharacter::FireWeapon()
 			}
 
 			GameServer()->CreateSound(m_Pos, SOUND_SHOTGUN_FIRE);
-		} break;
+		} break;*/
 
-		case WEAPON_GRENADE:
+		/*case WEAPON_GRENADE:
 		{
 			new CProjectile(GameWorld(), WEAPON_GRENADE,
 				m_pPlayer->GetCID(),
@@ -375,7 +375,7 @@ void CCharacter::FireWeapon()
 				g_pData->m_Weapons.m_Grenade.m_pBase->m_Damage, true, 0, SOUND_GRENADE_EXPLODE, WEAPON_GRENADE);
 
 			GameServer()->CreateSound(m_Pos, SOUND_GRENADE_FIRE);
-		} break;
+		} break;*/
 
 		case WEAPON_LASER:
 		{
@@ -383,7 +383,7 @@ void CCharacter::FireWeapon()
 			GameServer()->CreateSound(m_Pos, SOUND_LASER_FIRE);
 		} break;
 
-		case WEAPON_NINJA:
+		/*case WEAPON_NINJA:
 		{
 			// reset Hit objects
 			m_NumObjectsHit = 0;
@@ -393,7 +393,7 @@ void CCharacter::FireWeapon()
 			m_Ninja.m_OldVelAmount = length(m_Core.m_Vel);
 
 			GameServer()->CreateSound(m_Pos, SOUND_NINJA_FIRE);
-		} break;
+		} break;*/
 
 	}
 
