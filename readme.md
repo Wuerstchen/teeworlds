@@ -1,4 +1,4 @@
-Teeworlds Instagib [![CircleCI](https://circleci.com/gh/teeworlds/teeworlds.svg?style=svg)](https://circleci.com/gh/teeworlds/teeworlds)
+Teeworlds Instagib
 =========
 
 Insta-kills with lasers!
